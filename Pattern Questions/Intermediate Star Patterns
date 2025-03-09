@@ -1,0 +1,273 @@
+def floyds_triangle(n):
+    num = 1
+    for i in range(1, n+1):
+        for j in range(i):
+            print(num, end=" ")
+            num += 1
+        print()
+
+floyds_triangle(5)
+
+# 1 
+# 2 3 
+# 4 5 6 
+# 7 8 9 10 
+# 11 12 13 14 15 
+
+
+
+def butterfly(n):
+    for i in range(1, n+1):
+        print('*' * i + ' ' * (2*(n-i)) + '*' * i)
+    for i in range(n, 0, -1):
+        print('*' * i + ' ' * (2*(n-i)) + '*' * i)
+
+butterfly(5)
+
+# *        *
+# **      **
+# ***    ***
+# ****  ****
+# **********
+# ****  ****
+# ***    ***
+# **      **
+# *        *
+
+
+
+
+def numeric_pyramid(n):
+    for i in range(1, n+1):
+        print(' ' * (n-i), end='')
+        for j in range(1, i+1):
+            print(j, end=' ')
+        print()
+
+numeric_pyramid(5)
+
+#     1 
+#    1 2 
+#   1 2 3 
+#  1 2 3 4 
+# 1 2 3 4 5 
+
+
+
+def reverse_numeric_pyramid(n):
+    for i in range(n, 0, -1):
+        print(' ' * (n-i), end='')
+        for j in range(1, i+1):
+            print(j, end=' ')
+        print()
+
+reverse_numeric_pyramid(5)
+
+# 1 2 3 4 5 
+#  1 2 3 4 
+#   1 2 3 
+#    1 2 
+#     1 
+
+
+
+def pascal_aligned(n):
+    for i in range(n):
+        num = 1
+        print(' ' * (n - i), end='')
+        for j in range(i + 1):
+            print(f'{num:3}', end=' ')
+            num = num * (i - j) // (j + 1)
+        print()
+
+pascal_aligned(5)
+
+#      1 
+#     1   1 
+#    1   2   1 
+#   1   3   3   1 
+#  1   4   6   4   1 
+
+
+
+def hollow_diamond(n):
+    for i in range(1, n+1):
+        print(' ' * (n - i) + '*', end='')
+        if i > 1:
+            print(' ' * (2*i - 3) + '*')
+        else:
+            print()
+    for i in range(n-1, 0, -1):
+        print(' ' * (n - i) + '*', end='')
+        if i > 1:
+            print(' ' * (2*i - 3) + '*')
+        else:
+            print()
+
+hollow_diamond(5)
+
+#     *    
+#    * *   
+#   *   *  
+#  *     * 
+# *       *
+#  *     * 
+#   *   *  
+#    * *   
+#     *    
+
+
+
+def number_triangle(n):
+    for i in range(1, n+1):
+        print(' '.join(str(j) for j in range(1, i+1)))
+
+number_triangle(5)
+
+# 1
+# 1 2
+# 1 2 3
+# 1 2 3 4
+# 1 2 3 4 5
+
+
+
+def inverted_number_triangle(n):
+    for i in range(n, 0, -1):
+        print(' '.join(str(j) for j in range(1, i+1)))
+
+inverted_number_triangle(5)
+
+# 1 2 3 4 5
+# 1 2 3 4
+# 1 2 3
+# 1 2
+# 1
+
+
+
+def star_hill(n):
+    for i in range(n):
+        print(' ' * (n - i - 1) + '*' * (2*i + 1))
+
+star_hill(5)
+
+#     *    
+#    ***   
+#   *****  
+#  ******* 
+# *********
+
+
+
+def binary_triangle(n):
+    for i in range(1, n+1):
+        for j in range(i):
+            print((j % 2), end=' ')
+        print()
+
+binary_triangle(5)
+
+# 0 
+# 0 1 
+# 0 1 0 
+# 0 1 0 1 
+# 0 1 0 1 0 
+
+
+
+def hollow_inverted_pyramid(n):
+    for i in range(n, 0, -1):
+        if i == n or i == 1:
+            print('* ' * i)
+        else:
+            print('* ' + '  ' * (i-2) + '*')
+
+hollow_inverted_pyramid(5)
+
+# * * * * * 
+# *       * 
+# *     * 
+# *   * 
+# * 
+
+
+
+def palindromic_pyramid(n):
+    for i in range(1, n+1):
+        print(' ' * (n-i), end='')
+        for j in range(i, 0, -1):
+            print(j, end='')
+        for j in range(2, i+1):
+            print(j, end='')
+        print()
+
+palindromic_pyramid(5)
+
+#     1
+#    212
+#   32123
+#  4321234
+# 543212345
+
+
+
+def hourglass(n):
+    for i in range(n, 0, -1):
+        print(' ' * (n - i) + '* ' * i)
+    for i in range(2, n+1):
+        print(' ' * (n - i) + '* ' * i)
+
+hourglass(5)
+
+# * * * * * 
+#  * * * * 
+#   * * * 
+#    * * 
+#     * 
+#    * * 
+#   * * * 
+#  * * * * 
+# * * * * * 
+
+
+
+def hollow_butterfly(n):
+    for i in range(1, n+1):
+        print('*' + ' ' * (i-2) + ('*' if i > 1 else '') + ' ' * (2*(n-i)) + '*' + ' ' * (i-2) + ('*' if i > 1 else ''))
+    for i in range(n, 0, -1):
+        print('*' + ' ' * (i-2) + ('*' if i > 1 else '') + ' ' * (2*(n-i)) + '*' + ' ' * (i-2) + ('*' if i > 1 else ''))
+
+hollow_butterfly(5)
+
+# *      **
+# * *    * *
+# *  *  *  *
+# *   **   *
+# *    *    *
+# *    *    *
+# *   **   *
+# *  *  *  *
+# * *    * *
+# *      **
+
+
+
+def numeric_hollow_pyramid(n):
+    for i in range(1, n+1):
+        print(' ' * (n - i), end='')
+        for j in range(1, i+1):
+            if j == 1 or j == i or i == n:
+                print(j, end=' ')
+            else:
+                print(' ', end=' ')
+        print()
+
+numeric_hollow_pyramid(5)
+
+#     1
+#    1 2
+#   1   3
+#  1     4
+# 1 2 3 4 5
+
