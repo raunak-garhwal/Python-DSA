@@ -7,5 +7,5 @@ def permutations(arr, l=0):
         permutations(arr, l + 1)
         arr[l], arr[i] = arr[i], arr[l]  # Backtrack
 
-s = input("\nEnter a string: ")
-permutations(list(s))
+string = input("\nEnter a string: ")
+permutations(list(string))

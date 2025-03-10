@@ -12,20 +12,18 @@ def fibonacci_series(n):
 # Function to print Fibonacci series up to n terms
 def print_fibonacci(n):
     fib_series = fibonacci_series(n)
-    print("Fibonacci Series up to {} terms:".format(n))
+    print(f"Fibonacci Series up to {n} terms:")
     for num in fib_series:
         print(num, end=" ")
 
 # Taking input from the user for the number of terms
-num_terms = int(input("Enter the number of terms: "))
+num_terms = int(input("\nEnter the number of terms: "))
 
 # Printing Fibonacci series
 print_fibonacci(num_terms)
 
 # Example of fibonacci series
 # 0 1 1 2 3 5 8 13 21 34 55 89
-
-
 
 
 """<--------------------------------------------------------------------------->"""
@@ -35,5 +33,5 @@ def fibonacci(n):
         return n
     return fibonacci(n - 1) + fibonacci(n - 2)
 
-num = int(input("Enter number of terms: "))
+num = int(input("\nEnter number of terms: "))
 print("Fibonacci Series:", [fibonacci(i) for i in range(num)])

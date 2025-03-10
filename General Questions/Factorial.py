@@ -4,6 +4,7 @@ def factorial(n):
     return n*factorial(n-1)
 
 n=int(input("Enter a number : "))
+
 if(n<0):
     print("Factorial for negative number does not exist.")
 elif(n==0):

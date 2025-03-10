@@ -12,8 +12,8 @@ for i in word_list:
 print(f"\nThe sentence is :",line)
 
 count=1
-for char in line:
-    if(char==" "):
+for words in line:
+    if(words==" "):
         count+=1
 
 print("\nThe total number of words in the sentence are :",count)
