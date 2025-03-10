@@ -5,13 +5,7 @@ def linear_search(my_list,target_value):
             return j
     return -1
 
-n=int(input("Enter the number of elements in the list : "))
-
-my_list=[]
-
-for i in range(n):
-    value=int(input(f"Enter {i+1} element : "))
-    my_list.append(value)
+my_list = list(map(int,input("\nEnter the elements in the list : ").split()))
 
 print(f"\nElements in the list are {my_list}")
          
@@ -20,6 +14,6 @@ target_value = int(input("\nEnter the element to search in the list : "))
 result = linear_search(my_list,target_value)
 
 if result == -1:
-    print(f"\nElement {target_value} not found in the list.\n")
+    print(f"\nElement {target_value} not found in the list.")
 else:
-    print(f"\nElement {target_value} found at index {result}.\n")
+    print(f"\nElement {target_value} found at index {result}.")

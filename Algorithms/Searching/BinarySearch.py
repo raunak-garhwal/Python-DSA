@@ -18,11 +18,7 @@ def binary_search(my_list, target_value):
 
 n=int(input("Enter the number of elements in a list : "))
 
-my_list=[]
-
-for i in range(n):
-    value=int(input(f"Enter {i+1} element : "))
-    my_list.append(value)
+my_list = list(map(int,input("\nEnter the elements in the list : ").split()))
 
 target_value = int(input("Enter the element to search in the list : "))
 
