@@ -15,14 +15,14 @@ def print_primes_up_to_n(n):
     for i in range(2, n+1):
         if is_prime(i):
             primes.append(i)
-    print("Prime numbers up to", n, ":", primes)
+    print(f"Prime numbers up to {n} : {primes}")
 
 # Example Usage
-num = int(input("Enter a number to check if it's prime: "))
+num = int(input("\nEnter a number to check if it's prime: "))
 if is_prime(num):
     print(num, "is a prime number.")
 else:
     print(num, "is not a prime number.")
 
-n = int(input("Enter a number to print all primes up to N: "))
+n = int(input("\nEnter a number to print all primes up to N: "))
 print_primes_up_to_n(n)

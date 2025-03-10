@@ -1,4 +1,4 @@
-num=int(input("Enter a number : "))
+num=int(input("\nEnter a number : "))
 
 rev_num=0
 

@@ -1,11 +1,6 @@
-n=int(input("\nEnter the size of the tuple : "))
-elements=[]
-tup=()
-replist=[]
+elements = list(map(int,input("\nEnter the elements of the tuple : ").split()))
 
-for i in range(n):
-    value=int(input(f"Enter {i+1} value : "))
-    elements.append(value)
+replist=[]
 
 tup = tuple(elements)
 

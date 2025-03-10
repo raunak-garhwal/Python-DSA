@@ -1,4 +1,4 @@
-while(1):
+while(True):
     def is_valid_password(password):
         # Check the length of the password
         if len(password) < 8:
@@ -11,7 +11,7 @@ while(1):
             if 'A' <= char <= 'Z':
                 has_upper = True
                 break
-        if has_upper == False :
+        if has_upper == False:
             print("Your password does not have any uppercase letter.")
 
         # Check for at least one lowercase letter

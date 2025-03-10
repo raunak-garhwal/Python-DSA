@@ -1,10 +1,4 @@
-n=int(input("Enter the size of the tuple : "))
-temp_list=[]
-org_tup=()
-
-for i in range(n):
-    value=int(input(f"Enter {i+1} element : "))
-    temp_list.append(value)
+temp_list= list(map(int,input("Enter the elements of the tuple : ").split()))
 
 org_tup = tuple(temp_list)
 print(f"Original Tuple is {org_tup}.")

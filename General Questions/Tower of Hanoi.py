@@ -6,5 +6,5 @@ def tower_of_hanoi(n, source, auxiliary, target):
     print(f"Move disk {n} from {source} to {target}")
     tower_of_hanoi(n - 1, auxiliary, source, target)
 
-num = int(input("Enter number of disks: "))
+num = int(input("\nEnter number of disks: "))
 tower_of_hanoi(num, 'A', 'B', 'C')

@@ -5,5 +5,5 @@ def generate_subsets(nums, index=0, subset=[]):
     generate_subsets(nums, index + 1, subset + [nums[index]])  # Include
     generate_subsets(nums, index + 1, subset)  # Exclude
 
-nums = list(map(int, input("Enter numbers separated by space: ").split()))
+nums = list(map(int, input("Enter elements separated by space: ").split()))
 generate_subsets(nums)
